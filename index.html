@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>元培醫事科技大學 - 歡迎使用 TronClass 行動教學平台</title>
+    <style>
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            text-align: center;
+        }
+
+        .box input[type="text"],
+        .box input[type="password"] {
+            background: #ececec;
+            display: block;
+            margin: 8px auto;
+            text-align: left;
+            border: 1px solid #18A5A5;
+            padding: 10px 29px;
+            width: 200px;
+            outline: none;
+            color: black;
+            transition: 0.25s;
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: #1BB6B7;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px 30px;
+            outline: none;
+            color: white;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .positioned-image {
+            position: absolute;
+            left: -30px;
+            top: -80px;
+        }
+        label{
+            color:gray;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <form>
+        <img src="logo.png" alt="image" width="480" height="80" class="positioned-image">
+        <label for="myInput">帳號(工號/學號):</label>
+        <input type="text"  id="myInput" oninput="changeColor()"  />
+        <label for="myInput2"> 密碼(同校務系統):</label>
+        <input type="password" id="myInput2" oninput="changeColor2()"  />
+        <input type="submit" name="" value="                       登錄                        " />
+    </form>
+</div>
+
+<script>
+
+    function changeColor() {
+        var input = document.getElementById("myInput");
+        input.style.backgroundColor = "#FFFFFF";
+    }
+    function changeColor2() {
+        var input2 = document.getElementById("myInput2");
+        input2.style.backgroundColor = "#FFFFFF";
+    }
+</script>
+</body>
+</html>
